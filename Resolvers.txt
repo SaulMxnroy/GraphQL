@@ -1,0 +1,35 @@
+mutation {
+//Add  
+createUser(data: {
+    firstName: "diego", 
+    lastName: "garcia", 
+    email:"email.com", 
+    password: "pass1234"
+  }) {
+    firstName
+    lastName
+    email
+    password
+  }
+}
+
+//Get All
+query {
+  getUsers {
+    idUser
+    firstName
+    email
+  }
+}
+
+mutation {
+  updateUser(idUser:2, fields: {
+    firstName: "Diego",
+    email: "updatedEmail.com"
+  })
+}
+
+//Delete
+mutation {
+  deleteUser(idUser :3)
+}
